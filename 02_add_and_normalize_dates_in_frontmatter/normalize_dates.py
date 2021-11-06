@@ -58,8 +58,9 @@ def make_files(input_dir, output_dir):
 
 if __name__ == "__main__":
 
-    input_dir= '/Users/alans/workshop/site_ksuid_migration/data_files/01_original_files'
-    output_dir = '/Users/alans/workshop/site_ksuid_migration/data_files/02_normalized_dates'
+    input_dir =  '/Users/alans/workshop/site_content_ksuid_migration_data/01_original_files'
+    output_dir = '/Users/alans/workshop/site_content_ksuid_migration_data/02_normalized_dates'
 
-    # clear_output_dir(output_dir)
-    # make_files(input_dir, output_dir)
+    clear_output_dir(output_dir)
+    make_files(input_dir, output_dir)
+
