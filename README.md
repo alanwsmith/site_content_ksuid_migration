@@ -8,8 +8,8 @@ Should only need to run this process one time.
 TODO:
 
 - [x] Get list of initial slugs to use for redirects
-- [x] Move files working directory with original dates
-- [] Normalize dates to ISO8601 w/o timezones in frontmatter
+- [] Move files working directory with original dates TODO: ensure modidifed time is accurate to use for updates
+- [x] Normalize dates to ISO8601 w/o timezones in frontmatter
 - [] Set status to `unpublished` for files with slug of `/tbd`
 
 OTHER:
