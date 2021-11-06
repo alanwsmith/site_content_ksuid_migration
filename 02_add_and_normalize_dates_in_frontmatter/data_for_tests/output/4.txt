@@ -1,0 +1,20 @@
+---
+category: Miscellaneous
+date: '2021-06-18T00:00:00'
+slug: /tbd
+status: wip
+title: ''
+type: post
+---
+
+foo = {}
+table.insert(foo, "bar")
+table.insert(foo, "baz")
+
+
+
+'''
+
+foo = {}
+foo[#foo+1]="bar"
+foo[#foo+1]="baz"
