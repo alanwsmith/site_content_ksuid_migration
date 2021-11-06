@@ -48,14 +48,9 @@ def make_files(input_dir, output_dir):
                 post['date'] = post['date'].strftime(
                     '%Y-%m-%dT%H:%M:%S'
                 )
-
-
-
-
-            new_date_time = parse(post['date'])
-            post['date'] = new_date_time.strftime("%Y-%m-%dT%H:%M:%S")
-
-
+            else:
+                new_date_time = parse(post['date'])
+                post['date'] = new_date_time.strftime("%Y-%m-%dT%H:%M:%S")
 
             with open(dest_file, 'w') as _out_file:
                 _out_file.write(frontmatter.dumps(post))
