@@ -13,7 +13,9 @@ from os.path import isfile
 # frontmatter than creates a KSUID for each one in order
 # waiting a second between so the dates order up
 # The dates aren't accurate to the posts, but that's fine
-# 
+
+# Note that there's no test file here becuase this basically does
+# one things that would be super obvious if it didn't work
 
 def clear_output_dir(output_dir):
     files_to_delete = [
