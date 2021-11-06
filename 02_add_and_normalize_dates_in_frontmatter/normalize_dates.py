@@ -55,18 +55,6 @@ def make_files(input_dir, output_dir):
             with open(dest_file, 'w') as _out_file:
                 _out_file.write(frontmatter.dumps(post))
 
-    #         if isinstance(post['date'], datetime.date):
-    #             new_date_time = post['date']
-    #         else:
-    #             pattern = re.compile(r'^\d\d\d\d\d\d\d\d\d\d')
-    #             if pattern.search(str(post['date'])):
-    #                 datetime_string = time.strftime(
-    #                     '%Y-%m-%dT%H:%M:%S-0400',
-    #                     time.localtime(int(post['date']))
-    #                 )
-    #                 new_date_time = parse(datetime_string)
-    #             else:
-
 
 if __name__ == "__main__":
 
