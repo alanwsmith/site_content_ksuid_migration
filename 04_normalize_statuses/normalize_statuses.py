@@ -28,6 +28,9 @@ def make_files(input_dir, output_dir):
             post['status'] = 'published'
         elif post['status'] == 'post':
             post['status'] = 'published'
+        elif post['status'] == 'wip':
+            post['status'] = 'scratch'
+
 
 
         # if 'status' in post:
@@ -35,15 +38,15 @@ def make_files(input_dir, output_dir):
         #     statuses.add(post['status'])
 
 
-            # x N/A
-            # x 'post'
+            # x N/A = 'published'
+            # x 'post' = 'published'
             # ok 'scratch'
             # ok 'published'
             # ok 'archive'
-            # 'draft'
-            # 'wip'
-            # 'scratchpad'
-            # 'complete'
+            # ok 'draft'
+            # 'wip' = 'scratch'
+            # 'scratchpad' = 'scratch'
+            # 'complete' = 'published'
             # slug /tbd = unpublished 
 
 
