@@ -31,7 +31,7 @@ class TestNormalizeDates(unittest.TestCase):
             Path('data_for_tests/output/0.txt').is_file()
         )
 
-        file_list = ['1', '2', '3', '4']
+        file_list = ['1', '2', '3', '4', '5']
 
         for file in file_list:
             a_file = f"{output_dir}/{file}.txt"

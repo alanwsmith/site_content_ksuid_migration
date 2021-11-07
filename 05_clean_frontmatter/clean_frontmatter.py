@@ -49,10 +49,12 @@ def make_files(input_dir, output_dir):
             post['categories'] = [ post['category'] ]
             post.metadata.pop('category')
 
-
-        # if 'draft' in post:
-        #     print(file)
-        #     print(post['draft'])
+        if 'draft' in post:
+            if post['draft']:
+                post['status'] = 'draft'
+            post.metadata.pop('draft')
+            # print(file)
+            # print(post['draft'])
 
         # Only output if there is content
         if post.content:
