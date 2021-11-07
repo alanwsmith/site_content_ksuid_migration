@@ -20,7 +20,7 @@ class TestNormalizeDates(unittest.TestCase):
             output_dir=output_dir
         )
 
-        file_list = ['1', '2', '3', '4', '5', '6', '7']
+        file_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 
         for file in file_list:
             a_file = f"{output_dir}/{file}.txt"
