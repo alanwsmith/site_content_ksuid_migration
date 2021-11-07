@@ -17,10 +17,15 @@ TODO:
 
 OTHER:
 
-- [] Convert 'description' frontmatter to 'blurb'
+- [] Add `categories` when missing.
+- [x] Convert 'description' frontmatter to 'blurb'
 - [] Translate titles to file names then remove titles
-- [] Remove `created` time stamps
+- [x] Remove `created` time stamps
 - [] Figure out what to do about tags (i.e. maybe rename to keywords? or, maybe not?)
-- [] Verify all posts have minimum set of: blurb, category, date, id, tags, type, updated
-- [] Clean up categories
-- [] Clean up tags
+- [] Verify all posts have minimum set of: blurb, categories, date, id, type, updated
+- [] Clean up categories (i.e. review and remove any that don't make sense)
+- [] Clean up tags (i.e. review and remove any that don't make sense - and colapse into categoreis)
+- [] Look at `title: null` in `py- Delete A Key From A Dictionary.txt`
+- [] Don't output posts with no content
+-
+-
