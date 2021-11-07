@@ -45,18 +45,28 @@ def make_files(input_dir, output_dir):
                 post['type'] = post['layout']
                 post.metadata.pop('layout')
 
+        if 'category' in post:
+            post['categories'] = [ post['category'] ]
+            post.metadata.pop('category')
 
-        output_file = file.replace(input_dir, output_dir)
-        with open(output_file, 'w') as _out:
-            frontmatter.dump(post, output_file)
+
+        # if 'draft' in post:
+        #     print(file)
+        #     print(post['draft'])
+
+        # Only output if there is content
+        if post.content:
+            output_file = file.replace(input_dir, output_dir)
+            with open(output_file, 'w') as _out:
+                frontmatter.dump(post, output_file)
 
 
-# - [] blurb
-# - [] categories
-# - [] category
-# - [] created
-# - [] date
-# - [] description
+# - [x] blurb - no change
+# - [x] categories - no change
+# - [x] category - convert to categories 
+# - [x] created - delete
+# - [x] date - no change
+# - [x] description - switch to blurb
 # - [] draft
 # - [] episode
 # - [] id

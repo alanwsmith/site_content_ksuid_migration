@@ -7,6 +7,8 @@ import filecmp
 import sys
 import io
 
+from pathlib import Path
+
 class TestNormalizeDates(unittest.TestCase):
 
     def test_first_file(self):
@@ -15,12 +17,21 @@ class TestNormalizeDates(unittest.TestCase):
         output_dir = "data_for_tests/output"
         target_dir = "data_for_tests/targets"
 
+        clean_frontmatter.clear_output_dir(
+            output_dir
+        )
+
         clean_frontmatter.make_files(
             input_dir=input_dir,
             output_dir=output_dir
         )
 
-        file_list = ['1', '2', '3']
+        # make sure files with no content don't get moved
+        self.assertFalse(
+            Path('data_for_tests/output/0.txt').is_file()
+        )
+
+        file_list = ['1', '2', '3', '4']
 
         for file in file_list:
             a_file = f"{output_dir}/{file}.txt"
