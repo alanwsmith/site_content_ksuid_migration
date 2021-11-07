@@ -7,6 +7,7 @@ id: 20Z6Br9fpoNO
 slug: /expect-a-flash-of-unstyled-content-fouc-in-dev-with-tailwind-2-and-gatsby
 status: published
 title: Expect A Flash Of Unstyled Content (FOUC) In Dev With Tailwind 2 and Gatsby
+type: post
 ---
 
 I was seeing a Flash Of Unstyled Content (FOUC) in my Gatsby site after installing Tailwind 2 via the [documentation](https://tailwindcss.com/docs/guides/gatsby). 

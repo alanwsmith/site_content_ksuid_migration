@@ -37,8 +37,10 @@ def make_files(input_dir, output_dir):
                 post.metadata.pop('description')
 
         if 'thumbnail' in post:
-            if post['thumbnail'] == None:
-                post.metadata.pop('thumbnail')
+            post.metadata.pop('thumbnail')
+
+        if 'thumbnail_full_url' in post:
+            post.metadata.pop('thumbnail_full_url')
 
         if 'layout' in post:
             if 'type' not in post:
@@ -81,13 +83,15 @@ def make_files(input_dir, output_dir):
                     post['categories'].append(tag)
             post.metadata.pop('tags')
 
+        if 'url' in post:
+            post.metadata.pop('url')
 
+        if 'work_in_progress' in post:
+            post.metadata.pop('work_in_progress')
 
-
-                # print(file)
-                # print(post['tags'])
-
-
+        # moving eveyrthing to post 
+        # there were only a couple other tyings
+        post['type'] = 'post'
 
         # Only output if there is content
         if post.content:
@@ -112,14 +116,14 @@ def make_files(input_dir, output_dir):
 # - [x] slub - removed (this was a typo)
 # - [x] slug - Keeping through this part of the process
 # - [x] status - updating as needed
-# - [] tags
-# - [] thumbnail
-# - [] thumbnail_full_url
-# - [] title
-# - [] type
-# - [] updated
-# - [] url
-# - [] work_in_progress
+# - [x] tags
+# - [x] thumbnail
+# - [x] thumbnail_full_url
+# - [x] title - keeping as is for now
+# - [x] type - moved the few things that weren't post to be post
+# - [x] updated - leaving along for now
+# - [x] url - removed 
+# - [x] work_in_progress - removed
 
 
 
@@ -129,6 +133,5 @@ if __name__ == "__main__":
 
     clear_output_dir(output_dir)
     make_files(input_dir, output_dir)
-
 
 
