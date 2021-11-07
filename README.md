@@ -17,6 +17,7 @@ TODO:
 
 OTHER:
 
+- [] Add Misc category to any that don't have it (pull the first category from `categories` if it exists)
 - [] Convert 'description' frontmatter to 'blurb'
 - [] Translate titles to file names then remove titles
 - [] Remove `created` time stamps
@@ -24,3 +25,4 @@ OTHER:
 - [] Verify all posts have minimum set of: blurb, category, date, id, tags, type, updated
 - [] Clean up categories
 - [] Clean up tags
+- [] Look at `title: null` in `py- Delete A Key From A Dictionary.txt`
