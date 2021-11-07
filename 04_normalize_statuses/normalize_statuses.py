@@ -22,8 +22,6 @@ def make_files(input_dir, output_dir):
         if isfile(file)
     ]
 
-    statuses = set()
-
     for file in files:
         post = frontmatter.load(file)
         if 'status' not in post:
@@ -36,16 +34,23 @@ def make_files(input_dir, output_dir):
         #     print(post['status'])
         #     statuses.add(post['status'])
 
-            # {'post', 'scratch', 'published', 'archive', 'draft', 'wip', 'scratchpad', 'complete'}
+
+            # x N/A
+            # x 'post'
+            # ok 'scratch'
+            # ok 'published'
+            # ok 'archive'
+            # 'draft'
+            # 'wip'
+            # 'scratchpad'
+            # 'complete'
+            # slug /tbd = unpublished 
 
 
         output_path = file.replace(input_dir, output_dir)
         with open(output_path, 'w') as _out_file:
             _out_file.write(frontmatter.dumps(post))
 
-
-    print('------')
-    print(statuses)
 
 if __name__ == "__main__":
     input_dir = '/Users/alans/workshop/site_content_ksuid_migration_data/03_ksuids_added'
