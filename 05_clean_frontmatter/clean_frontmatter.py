@@ -53,8 +53,41 @@ def make_files(input_dir, output_dir):
             if post['draft']:
                 post['status'] = 'draft'
             post.metadata.pop('draft')
-            # print(file)
-            # print(post['draft'])
+
+        if 'episode' in post:
+            post.metadata.pop('episode')
+
+        if 'keywords' in post:
+            post.metadata.pop('keywords')
+
+        if 'layout' in post:
+            post.metadata.pop('layout')
+
+        if 'originally_posted' in post:
+            post.metadata.pop('originally_posted')
+
+        if 'permalink' in post:
+            post.metadata.pop('permalink')
+
+        if 'slub' in post:
+            post.metadata.pop('slub')
+
+        if 'tags' in post:
+            if len(post['tags']):
+                if 'categories' not in post:
+                    post['categories'] = []
+
+                for tag in post['tags']:
+                    post['categories'].append(tag)
+            post.metadata.pop('tags')
+
+
+
+
+                # print(file)
+                # print(post['tags'])
+
+
 
         # Only output if there is content
         if post.content:
@@ -69,16 +102,16 @@ def make_files(input_dir, output_dir):
 # - [x] created - delete
 # - [x] date - no change
 # - [x] description - switch to blurb
-# - [] draft
-# - [] episode
-# - [] id
-# - [] keywords
-# - [] layout
-# - [] originally_posted
-# - [] permalink
-# - [] slub
-# - [] slug
-# - [] status
+# - [x] draft - use to update status
+# - [x] episode - removed
+# - [x] id - no change
+# - [x] keywords - remove, there aren't many of them
+# - [x] layout - removed 
+# - [x] originally_posted - removed
+# - [x] permalink - removed
+# - [x] slub - removed (this was a typo)
+# - [x] slug - Keeping through this part of the process
+# - [x] status - updating as needed
 # - [] tags
 # - [] thumbnail
 # - [] thumbnail_full_url

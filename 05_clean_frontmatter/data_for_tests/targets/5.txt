@@ -5,7 +5,6 @@ date: '2020-10-13T00:00:00'
 id: 20Z5YRMKPV7L
 slug: /getting-youtube-autoplay-to-work-in-hugo-shortcodes
 status: draft
-tags: []
 title: Getting YouTube Autoplay to Work in Hugo Shortcodes
 type: post
 ---

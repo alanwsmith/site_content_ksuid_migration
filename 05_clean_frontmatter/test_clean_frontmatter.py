@@ -41,7 +41,7 @@ class TestNormalizeDates(unittest.TestCase):
             with open(b_file) as _b:
                 b_list = _b.read().splitlines()
             self.assertListEqual(
-                a_list, b_list
+                a_list, b_list, f"--- ERROR IN FILE: {file}"
             )
 
 

@@ -1,11 +1,11 @@
 ---
+categories:
+- Tailwind
+- Gatsby
 date: '2021-02-19T18:18:38'
 id: 20Z6Br9fpoNO
 slug: /expect-a-flash-of-unstyled-content-fouc-in-dev-with-tailwind-2-and-gatsby
 status: published
-tags:
-- Tailwind
-- Gatsby
 title: Expect A Flash Of Unstyled Content (FOUC) In Dev With Tailwind 2 and Gatsby
 ---
 
