@@ -24,3 +24,4 @@ OTHER:
 - [] Figure out what to do about tags (i.e. maybe rename to keywords? or, maybe not?)
 - [] Verify all posts have minimum set of: blurb, category, date, id, tags, type, updated
 - [] Clean up categories
+- [] Clean up tags
