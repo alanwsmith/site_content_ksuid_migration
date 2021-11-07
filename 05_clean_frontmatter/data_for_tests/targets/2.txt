@@ -3,9 +3,9 @@ categories:
 - Miscellaneous
 date: '2013-02-23T00:00:00'
 id: 20Z57nrGBFZ6
-layout: post
 status: published
 title: 145 Types of Levi's or&#58; Buying Jeans Shouldn't Be This Complicated
+type: post
 ---
 
 <p>
